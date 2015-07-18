@@ -1,0 +1,9 @@
+rect	17,0,562,614,0
+row	0
+file	C:\Develop\hdl-learn\0003-knight\knight4.v	ADR: 430	LY: 17	ADRLE: 0	SDI: 0	KC: 27942	WZIME: 32768	INDEXF: 0	RATEVO: 0	MARK: 0,0,0,0	TAGVF: 0
+file	C:\Develop\hdl-learn\0003-knight\knight4test.v	ADR: 0	LY: 0	ADRLE: 155	SDI: 0	KC: 27942	WZIME: 32768	INDEXF: 0	RATEVO: 0	MARK: 0,0,0,0
+file	C:\Develop\hdl-learn\0003-knight\makefile	ADR: 847	LY: 22	ADRLE: 593	SDI: 0	KC: 27942	WZIME: 32768	INDEXF: 0	RATEVO: 0	MARK: 0,0,0,0
+file	C:\Develop\hdl-learn\0003-knight\knight5.v	ADR: 399	LY: 9	ADRLE: 370	SDI: 0	KC: 27942	TAG: <xaf7r1-a3a268-arjsp-k17j>	WZIME: 32768	INDEXF: 0	RATEVO: 0	MARK: 0,0,0,0	TAGVF: 0
+file	C:\Develop\hdl-learn\0003-knight\knight5test.v	ADR: 0	LY: 0	ADRLE: 0	SDI: 0	KC: 27942	WZIME: 32768	INDEXF: 0	RATEVO: 0	MARK: 0,0,0,0
+rowf	0
+popupf	C:\Develop\hdl-learn\0003-knight\knight5.v
