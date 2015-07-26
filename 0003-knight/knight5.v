@@ -1,21 +1,53 @@
 // knight flasher
 // bit slice
-module knight5bit(input ck, input res, input up, input iupper, input ilower, 
-		output out, output oupper, output olower);
+module knight5bit(input ck, input res, input up, input iupper, input ilower, output out);
   reg out;
-  reg oupper;
-  reg olower;
 
   always @(posedge ck or posedge res or posedge up or
 	   posedge iupper or posedge ilower) begin
-    if (res) begin
+    if (res)
       out <= 0;
-      oupper <= 0;
-      olower <= 0;
-    end else begin
+    else begin
+      if (up) then
+        out <= ilower;
+      else
+        out <= iupper;
     end
   end
+endmodule;
 
+module knight5msb(input ck, input res, input up, input ilower, output out);
+  reg out;
+
+  always @(posedge ck or posedge res or posedge up or
+	   posedge ilower) begin
+    if (res)
+      out <= 0;
+    else begin
+      if (up) then
+        out <= ilower;
+      else
+        out <= iupper;
+    end
+  end
+endmodule;
+
+module knight5lsb(input ck, input res, input up, input iupper, 
+		output out, output oup);
+  reg out;
+  reg oup;
+
+  always @(posedge ck or posedge res or posedge up or
+	   posedge iupper) begin
+    if (res) begin
+      out <= 1;
+      oup <= 1;
+    end else begin
+      if (!up) then begin
+        out <= iupper;
+      end
+    end
+  end
 endmodule;
 
 module knight5(input ck, input res, output [7:0] out);
