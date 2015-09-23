@@ -1,13 +1,13 @@
-module knight4test;
+module knight5test;
 
 reg tck, tres;
 wire [7:0] tout;
 
-knight4 kn1(tck, tres, tout);
+knight5 kn1(tck, tres, tout);
 
 initial begin
-  $dumpfile("knight4test.vcd");
-  $dumpvars(0, knight4test);
+  $dumpfile("knight5test.vcd");
+  $dumpvars(0, knight5test);
   $monitor ("%t: tck = %b, tres = %b, out = %b", $time, tck, tres, tout);
 
               tck=0; tres=0;
