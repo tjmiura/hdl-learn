@@ -1,5 +1,5 @@
 // knight flasher
-// bit slice
+// bit slice: not work
 module knight5bit(input ck, input res, input up, input iupper, input ilower, output out);
   reg out;
 

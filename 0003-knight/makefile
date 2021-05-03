@@ -1,4 +1,4 @@
-all: sim1 sim2 sim3
+all: sim1 sim2 sim3 sim4 sim5 sim6
 
 knight1.vvp: knight1.v knight1test.v
 	iverilog -o knight1.vvp -s knight1test knight1.v knight1test.v
@@ -44,4 +44,13 @@ knight5test.vcd: knight5.vvp
 
 sim5: knight5test.vcd
 	gtkwave knight5test.vcd
+
+knight6.vvp: knight6.v knight6test.v
+	iverilog -o knight6.vvp -s knight6test knight6.v knight6test.v
+
+knight6test.vcd: knight6.vvp
+	vvp knight6.vvp
+
+sim6: knight6test.vcd
+	gtkwave knight6test.vcd
 
