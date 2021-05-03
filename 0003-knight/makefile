@@ -54,3 +54,12 @@ knight6test.vcd: knight6.vvp
 sim6: knight6test.vcd
 	gtkwave knight6test.vcd
 
+knight6p1.vvp: knight6.v knight6testp1.v
+	iverilog -o knight6p1.vvp -s knight6testp1 knight6.v knight6testp1.v
+
+knight6testp1.vcd: knight6p1.vvp
+	vvp knight6p1.vvp
+
+sim6p1: knight6testp1.vcd
+	gtkwave knight6testp1.vcd
+

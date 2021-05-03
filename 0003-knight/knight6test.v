@@ -2,7 +2,7 @@ module knight6test;
 
 reg tck, tres;
 wire [7:0] tout;
-wire up;
+wire tup;
 
 knight6 kn1(tck, tres, tout, tup);
 
