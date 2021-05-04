@@ -3,8 +3,7 @@
 module knight5bit(input ck, input res, input up, input iupper, input ilower, output out);
   reg out;
 
-  always @(posedge ck or posedge res or posedge up or
-	   posedge iupper or posedge ilower) begin
+  always @(posedge ck) begin
     if (res)
       out <= 0;
     else begin
@@ -21,8 +20,7 @@ module knight5msb(input ck, input res, input up, input ilower,
   reg out;
   reg oup;
 
-  always @(posedge ck or posedge res or posedge up or
-	   posedge ilower) begin
+  always @(posedge ck) begin
     if (res) begin
       out <= 0;
       oup <= 1;
@@ -40,8 +38,7 @@ module knight5lsb(input ck, input res, input up, input iupper,
   reg out;
   reg oup;
 
-  always @(posedge ck or posedge res or posedge up or
-	   posedge iupper) begin
+  always @(posedge ck) begin
     if (res) begin
       out <= 1;
       oup <= 1;
@@ -68,7 +65,7 @@ module knight5(input ck, input res, output [7:0] out);
   knight5bit bit1(ck, res, up, out[2], out[0], out[1]);
   knight5lsb lsb(ck, res, up, out[1], out[0], upl);
 
-  always @(posedge ck or posedge res) begin
+  always @(posedge ck) begin
     if (res) begin
       up <= 1;
     end else begin
