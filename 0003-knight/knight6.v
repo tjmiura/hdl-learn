@@ -3,8 +3,9 @@
 module knight6mid(input ck, input res, input up, input iupper, input ilower, output out);
   reg out;
 
-  always @(posedge ck or posedge res or posedge up or
-	   posedge iupper or posedge ilower) begin
+//  always @(posedge ck or posedge res or posedge up or
+//	   posedge iupper or posedge ilower) begin
+  always @(posedge ck) begin
     if (res)
       out <= 0;
     else begin
@@ -19,8 +20,9 @@ endmodule
 module knight6lsb(input ck, input res, input up, input iupper, output out);
   reg out;
 
-  always @(posedge ck or posedge res or posedge up or
-	   posedge iupper) begin
+//  always @(posedge ck or posedge res or posedge up or
+//	   posedge iupper) begin
+  always @(posedge ck) begin
     if (res)
       out <= 1;
     else begin
@@ -35,7 +37,8 @@ endmodule
 module knight6msb(input ck, input res, input up, input ilower, output out);
   reg out;
 
-  always @(posedge ck or posedge res or posedge up or posedge ilower) begin
+//  always @(posedge ck or posedge res or posedge up or posedge ilower) begin
+  always @(posedge ck) begin
     if (res)
       out <= 0;
     else begin
@@ -50,7 +53,8 @@ endmodule
 module knight6dir(input ck, input res, input imsb, input ilsb, output up);
   reg up;
 
-  always @(posedge ck or posedge res or posedge imsb or posedge ilsb) begin
+//  always @(posedge ck or posedge res or posedge imsb or posedge ilsb) begin
+  always @(posedge ck) begin
     if (res)
       up <= 1;
     else begin

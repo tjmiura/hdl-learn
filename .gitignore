@@ -2,3 +2,4 @@
 *.vcd
 0002-counter/ct2bit
 *.vvp
+*.vdc
