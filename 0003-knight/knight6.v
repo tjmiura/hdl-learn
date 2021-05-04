@@ -78,6 +78,6 @@ module knight6(input ck, input res, output [7:0] out, output up);
   knight6mid bit2(ck, res, up, out[3], out[1], out[2]);
   knight6mid bit1(ck, res, up, out[2], out[0], out[1]);
   knight6lsb lsb( ck, res, up, out[1],         out[0]);
-  knight6dir dir( ck, res, out[7], out[0], up);
+  knight6dir dir( ck, res, out[6], out[1], up); // lookahead
 endmodule
 
